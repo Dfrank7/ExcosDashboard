@@ -8,7 +8,7 @@ import { LoginComponent } from '../auth/login/login.component';
 import { RegisterComponent } from '../auth/register/register.component';
 import { AddExcosComponent } from '../add-excos/add-excos.component';
 import { EditExcoComponent } from '../edit-exco/edit-exco.component';
-import {BlogComponent} from '../blog/blog.component
+import {BlogComponent} from '../blog/blog.component';
   import { from } from 'rxjs';
 
 const routes:Routes = [
