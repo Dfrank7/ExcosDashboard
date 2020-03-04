@@ -46,4 +46,12 @@ export class DashboardService {
           return data;
         }));
   }
+
+  getBlogs(): Observable<any>{
+    console.log('url :', `${Endpoint.BLOGS.blogs}`);
+    return this.http.get(`${Endpoint.BLOGS.blogs}`).pipe(
+      map(data => {
+        return data;
+      }))
+}
 }

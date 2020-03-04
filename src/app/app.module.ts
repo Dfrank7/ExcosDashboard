@@ -22,6 +22,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { EditExcoComponent } from './edit-exco/edit-exco.component';
+import { BlogComponent } from './blog/blog.component';
 
 
 const config = {
@@ -40,7 +41,8 @@ const config = {
     HeaderComponent,
     FooterComponent,
     AddExcosComponent,
-    EditExcoComponent
+    EditExcoComponent,
+    BlogComponent
   ],
   
   imports: [

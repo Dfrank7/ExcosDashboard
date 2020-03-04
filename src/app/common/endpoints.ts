@@ -12,4 +12,8 @@ export const Endpoint = {
         excos: `${BASE_URL}/excos`,
     },
 
+    BLOGS: {
+        blogs: `${BASE_URL}/blogs`
+    }
+
 }
