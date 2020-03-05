@@ -23,6 +23,7 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { EditExcoComponent } from './edit-exco/edit-exco.component';
 import { BlogComponent } from './blog/blog.component';
+import { AddBlogsComponent } from './add-blogs/add-blogs.component';
 
 
 const config = {
@@ -42,7 +43,8 @@ const config = {
     FooterComponent,
     AddExcosComponent,
     EditExcoComponent,
-    BlogComponent
+    BlogComponent,
+    AddBlogsComponent
   ],
   
   imports: [

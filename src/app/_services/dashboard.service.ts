@@ -4,6 +4,7 @@ import { Observable, from } from 'rxjs';
 import { Endpoint } from '../common/endpoints';
 import { map } from 'rxjs/operators';
 import { excoRequestModel, excoEditRequestModel } from '../_models/request/excos';
+import { blogRequestModel } from '../_models/request/blogs';
 
 @Injectable({
   providedIn: 'root'
@@ -53,5 +54,17 @@ export class DashboardService {
       map(data => {
         return data;
       }))
+}
+
+addBlogs(blogRequest: blogRequestModel): Observable<any> {
+  return this.http.post(Endpoint.BLOGS.blogs, blogRequest,
+    {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).pipe(
+      map(data => {
+        return data;
+      }));
 }
 }

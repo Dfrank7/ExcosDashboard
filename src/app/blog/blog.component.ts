@@ -17,7 +17,6 @@ export class BlogComponent implements OnInit {
     this.getBlogs();
   }
 
-  
   async  getBlogs() {
     this.isLoadingBlogs = true;
     this.isDataBlogs = false;

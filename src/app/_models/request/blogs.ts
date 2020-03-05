@@ -1,4 +1,4 @@
 export interface blogRequestModel {
-    title: "String",
-    detail: "String"
+    title: "string",
+    details: "string",
 }
