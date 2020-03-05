@@ -36,6 +36,12 @@
                         <form [formGroup]=blogForm>
                             <div class="containers" ion-padding>
                                 <div class="form-group">
+                                    <label position="floating">Avatar</label>
+                                    <input type="file" (change)="onFileChange($event)" />
+                                    <!-- <input class="form-control" type="file" formControlName="file" /> -->
+                                </div> 
+
+                                <div class="form-group">
                                     <label position="floating">Title</label>
                                     <input class="form-control" type="text" formControlName="title"
                                         [class.invalid]="!blogForm.controls.title.valid && (blogForm.controls.title.dirty || submitAttempt)" />
@@ -46,13 +52,8 @@
                                     <input class="form-control" type="text" formControlName="details"
                                         [class.invalid]="!blogForm.controls.details.valid && (blogForm.controls.details.dirty || submitAttempt)" />
                                 </div>
-
-                                <!-- <div class="form-group">
-                                    <label position="floating">Avatar</label>
-                                    <input type="file" (change)="onFileChange($event)" />
-                                    <!-- <input class="form-control" type="file" formControlName="file" /> -->
-                                <!-- </div> --> 
-                            </  div>
+                                
+                            </div>
                             <div class="form-group">
                                 <button  class="btn btn-primary" shape="round" expand="full"
                                     (click)="addBlog()">Add Blogs </button>
