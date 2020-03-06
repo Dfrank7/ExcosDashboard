@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgxSpinnerModule } from 'ngx-spinner';   
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
@@ -17,6 +18,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
@@ -25,6 +27,7 @@ import { EditExcoComponent } from './edit-exco/edit-exco.component';
 import { BlogComponent } from './blog/blog.component';
 import { AddBlogsComponent } from './add-blogs/add-blogs.component';
 import { EditBlogComponent } from './edit-blog/edit-blog.component';
+
 
 
 const config = {
@@ -46,7 +49,7 @@ const config = {
     EditExcoComponent,
     BlogComponent,
     AddBlogsComponent,
-    EditBlogComponent
+    EditBlogComponent 
   ],
   
   imports: [
@@ -59,6 +62,9 @@ const config = {
     AngularFirestoreModule, // firestore
     AngularFireAuthModule, // auth
     AngularFireStorageModule, // storage
+    NgxSpinnerModule,
+    BrowserAnimationsModule,
+
 
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),

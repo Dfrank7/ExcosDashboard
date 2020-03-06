@@ -2,6 +2,8 @@ import { Component, OnInit, TemplateRef } from '@angular/core';
 import { DashboardService } from 'src/app/_services/dashboard.service';
 import {BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { Router } from '@angular/router';
+import { NgxSpinnerService } from "ngx-spinner";  
+
 
 @Component({
   selector: 'app-dashboard',
@@ -15,9 +17,14 @@ export class DashboardComponent implements OnInit {
   isDataExcos;
 
   public modalRef: BsModalRef;
-  constructor(private dashboard:DashboardService, private router: Router) { }
+  constructor(private dashboard:DashboardService, private router: Router, private spinner: NgxSpinnerService) { 
+ 
+ 
+  
+  }
 
   ngOnInit() {
+    // console.log(this.SpinnerService)
     this.getExcos();
   }
 
@@ -28,12 +35,14 @@ export class DashboardComponent implements OnInit {
   } 
   
   async  getExcos() {
+    this.spinner.show()
     this.isLoadingExcos = true;
     this.isDataExcos = false;
     await this.dashboard.getExcos().subscribe(excos => {
       this.isLoadingExcos = false
       this.isDataExcos = true
       this.DataExcos = excos.excos;
+      this.spinner.hide()
       // console.log('recent excos', excos);
 
     }, error => {
