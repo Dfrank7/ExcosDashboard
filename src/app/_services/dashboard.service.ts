@@ -4,7 +4,7 @@ import { Observable, from } from 'rxjs';
 import { Endpoint } from '../common/endpoints';
 import { map } from 'rxjs/operators';
 import { excoRequestModel, excoEditRequestModel } from '../_models/request/excos';
-import { blogRequestModel } from '../_models/request/blogs';
+import { blogRequestModel, blogEditRequestModel } from '../_models/request/blogs';
 
 @Injectable({
   providedIn: 'root'
@@ -67,4 +67,18 @@ addBlogs(blogRequest: blogRequestModel): Observable<any> {
         return data;
       }));
 }
+
+EditBlog(id, blogRequest: blogEditRequestModel): Observable<any> {
+  console.log(`${Endpoint.BLOGS.blogs}/${id}`)
+  return this.http.put(`${Endpoint.BLOGS.blogs}/${id}`, blogRequest,
+    {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).pipe(
+      map(data => {
+        return data;
+      }));
+}
+
 }

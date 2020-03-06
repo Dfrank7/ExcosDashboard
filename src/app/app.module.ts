@@ -24,6 +24,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { EditExcoComponent } from './edit-exco/edit-exco.component';
 import { BlogComponent } from './blog/blog.component';
 import { AddBlogsComponent } from './add-blogs/add-blogs.component';
+import { EditBlogComponent } from './edit-blog/edit-blog.component';
 
 
 const config = {
@@ -44,7 +45,8 @@ const config = {
     AddExcosComponent,
     EditExcoComponent,
     BlogComponent,
-    AddBlogsComponent
+    AddBlogsComponent,
+    EditBlogComponent
   ],
   
   imports: [

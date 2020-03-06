@@ -4,11 +4,11 @@
             <div>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb breadcrumb-style1 mg-b-10">
-                        <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Blogs</li>
+                        <li class="breadcrumb-item"><a href="#">Blog</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Edit Blog</li>
                     </ol>
                 </nav>
-                <h4 class="mg-b-0 tx-spacing--1">Welcome to Dashboard</h4>
+                <h4 class="mg-b-0 tx-spacing--1">Welcome to Blog</h4>
             </div>
             <div class="d-none d-md-block">
                 <button class="btn btn-sm pd-x-15 btn-white btn-uppercase">
@@ -18,6 +18,8 @@
         </div>
 
         <div class="row row-xs">
+
+
             <div class="col-lg-12 col-xl-12 mg-t-10">
                 <div class="card mg-b-10">
                     <div class="card-header pd-t-20 d-sm-flex align-items-start justify-content-between bd-b-0 pd-b-0">
@@ -33,28 +35,26 @@
                     <div class="col-md-6">
                         <form [formGroup]=blogForm>
                             <div class="containers" ion-padding>
+
                                 <div class="form-group">
                                     <label position="floating">Avatar</label>
                                     <input type="file" (change)="onFileChange($event)" />
                                     <!-- <input class="form-control" type="file" formControlName="file" /> -->
-                                </div> 
+                                </div>
 
                                 <div class="form-group">
                                     <label position="floating">Title</label>
-                                    <input class="form-control" type="text" formControlName="title"
-                                        [class.invalid]="!blogForm.controls.title.valid && (blogForm.controls.title.dirty || submitAttempt)" />
+                                    <input class="form-control" type="text" formControlName="title" />
                                 </div>
 
                                 <div class="form-group">
-                                    <label position="floating">Detail</label>
-                                    <input class="form-control" type="text" formControlName="details"
-                                        [class.invalid]="!blogForm.controls.details.valid && (blogForm.controls.details.dirty || submitAttempt)" />
+                                    <label position="floating">Details</label>
+                                    <input class="form-control" type="text" formControlName="details"  />
                                 </div>
-                                
+                            
                             </div>
                             <div class="form-group">
-                                <button  class="btn btn-primary" shape="round" expand="full"
-                                    (click)="addBlog()">Add Blogs </button>
+                                <button class="btn btn-primary" shape="round" expand="full" (click)="editBlog(id)">Update Blog </button>
                             </div>
                         </form>
                     </div><!-- table-responsive -->

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DashboardService } from 'src/app/_services/dashboard.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
@@ -10,12 +11,17 @@ export class BlogComponent implements OnInit {
   DataBlogs:any[] = [];
   isLoadingBlogs;
   isDataBlogs;
-  constructor(private dashboard:DashboardService) { }
+  constructor(private dashboard:DashboardService, private router: Router) { }
 
   ngOnInit() {
     console.log('got here ')
     this.getBlogs();
   }
+
+  public goEditBlog(data) {
+    this.router.navigateByUrl('edit-blog', { state: data })
+    // console.log(data)
+  } 
 
   async  getBlogs() {
     this.isLoadingBlogs = true;

@@ -47,12 +47,20 @@
                                         [class.invalid]="!excoForm.controls.email.valid && (excoForm.controls.email.dirty || submitAttempt)" />
                                 </div>
 
-
-                                <div class="form-group">
+                                <!-- <div class="form-group">
                                     <label position="floating">Post</label>
                                     <input class="form-control" type="text" formControlName="post"
                                         [class.invalid]="!excoForm.controls.post.valid && (excoForm.controls.post.dirty || submitAttempt)" />
+                                </div> -->
+                                <div class="form-group">
+                                    <label position="floating">Post</label>
+                                    <select class="form-control"  (change)="getPost($event)">
+                                            <option value="">Select Post</option>
+                                            <option  value="{{ post.id }}" *ngFor="let post of posts">{{ post.name }}</option>
+                                    </select>
+
                                 </div>
+                                
                                 <div class="form-group">
                                     <label position="floating">Department</label>
                                     <input class="form-control" type="text" formControlName="department"
@@ -64,11 +72,11 @@
                                         [class.invalid]="!excoForm.controls.mobile.valid && (excoForm.controls.mobile.dirty || submitAttempt)" />
                                 </div>
 
-                                <div class="form-group">
+                                <!-- <div class="form-group">
                                     <label position="floating">Number</label>
                                     <input class="form-control" type="text" formControlName="number"
                                         [class.invalid]="!excoForm.controls.number.valid && (excoForm.controls.number.dirty || submitAttempt)" />
-                                </div>
+                                </div> -->
 
                                 <div class="form-group">
                                     <label position="floating">Avatar</label>

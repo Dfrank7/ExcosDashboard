@@ -11,6 +11,7 @@ import { EditExcoComponent } from '../edit-exco/edit-exco.component';
 import {BlogComponent} from '../blog/blog.component';
   import { from } from 'rxjs';
 import { AddBlogsComponent } from '../add-blogs/add-blogs.component';
+import { EditBlogComponent } from '../edit-blog/edit-blog.component';
 
 const routes:Routes = [
   {
@@ -32,7 +33,8 @@ const routes:Routes = [
       { path: 'add-excos', component: AddExcosComponent },
       { path: 'edit-excos', component: EditExcoComponent },
       { path: 'apps', component: BlogComponent },
-      { path:  'add-blogs', component: AddBlogsComponent}
+      { path:  'add-blogs', component: AddBlogsComponent},
+      { path: 'edit-blog', component: EditBlogComponent}
 
 
     ]

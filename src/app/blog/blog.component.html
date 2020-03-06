@@ -49,6 +49,11 @@
                     <td class="tx-color-03 tx-normal">{{ i+1}}</td>
                     <td class="tx-medium text-left">{{blog.title}}</td>
                     <td class="text-left tx-teal">{{ blog.details }}</td>
+                    <td class="tx-medium text-left">
+                      <span><button class="btn btn-primary" (click)="goEditBlog(blog)">Edit</button></span>
+                      <span style="margin-left: 2px;"><button class="btn btn-danger"
+                          (click)="DeleteExco(item._id)">Delete</button></span>
+                    </td>
                   </tr>
                 </tbody>
               </table>
