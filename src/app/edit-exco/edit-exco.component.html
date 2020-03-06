@@ -48,12 +48,12 @@
 
                                 <div class="form-group">
                                     <label position="floating">Post</label>
-                                    <input class="form-control" type="text" formControlName="post" />
-                                    <!-- <option value="" class="form-control" (onChange)="getPost($ev)">
-                                        <option value="">Select Post</option>
-                                        <option value="{{ post.id }}" *ngFor="let post of posts">{{ post }}</option>
-                                    </option> -->
-                                </div> 
+                                    <select [ngModel]="this.data.number" class="form-control" formControlName="post"  (change)="getPost($event)">
+                                        <!-- <option value="post"></option> -->
+                                            <option  value="{{ post.id }}" *ngFor="let post of posts" [selected]=" post.id == this.data.number ? true:false " >{{ post.name }}</option>
+                                    </select>
+
+                                </div>
                                 <div class="form-group">
                                     <label position="floating">Department</label>
                                     <input class="form-control" type="text" formControlName="department"  />
